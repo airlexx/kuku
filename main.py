@@ -6,10 +6,17 @@ os.system('cls')
 print("Welcome to kuku")
 print("by Airlex")
 
-def ReviewTable(a, b):
+def SelectTable(string):
+    separator = " "
+    tables = list(string.split(separator))
+    int_tables = [int(element) for element in tables]
+
+    return int_tables
+
+def ReviewTable(tables):
     while True:
-        n1 = random.randint(a,b)
-        n2 = random.randint(a,b)
+        n1 = random.randint(tables[0],len(tables))
+        n2 = random.randint(tables[0],len(tables))
 
         user_answer = input(f"{n1}*{n2} = ")
 
@@ -26,4 +33,6 @@ def ReviewTable(a, b):
 
     print("see you soon!")
 
-ReviewTable(1, 10)
+user_input = input("Enter your multiplication tables : ")
+
+ReviewTable(SelectTable(user_input))
