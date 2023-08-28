@@ -7,7 +7,8 @@ print("Welcome to kuku")
 print("by Airlex")
 
 def SelectTable(string):
-    separator = " "
+    string = string.replace(" ", "")
+    separator = ","
     tables = list(string.split(separator))
     int_tables = [int(element) for element in tables]
 
