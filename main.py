@@ -1,10 +1,15 @@
 import os
 import random
+from colorama import init as colorama_init
+from colorama import Fore
+from colorama import Style
 
 os.system('cls')
+colorama_init()
 
-print("Welcome to kuku")
+print(f"{Fore.GREEN}Welcome to kuku{Style.RESET_ALL}")
 print("by Airlex")
+print("")
 
 def SelectTable(string):
     string = string.replace(" ", "")
@@ -30,10 +35,10 @@ def ReviewTable(tables):
 
         try:
             if (int(user_answer) == n1 * n2):
-                print("correct")
+                print(f"{Fore.GREEN}correct{Style.RESET_ALL}")
                 point += 1
             else:
-                print("incorrect")
+                print(f"{Fore.RED}incorrect{Style.RESET_ALL}")
         except:
             print("invalid input")
 
