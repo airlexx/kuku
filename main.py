@@ -1,5 +1,6 @@
 import os
 import random
+import time
 from colorama import init as colorama_init
 from colorama import Fore
 from colorama import Style
@@ -22,6 +23,8 @@ def SelectTable(string):
 def ReviewTable(tables):
     point = 0
     multiplicationCount = 0
+    start_time = time.time()
+
     while True:
         n1 = random.randint(tables[0],len(tables))
         n2 = random.randint(tables[0],len(tables))
@@ -42,7 +45,11 @@ def ReviewTable(tables):
         except:
             print("invalid input")
 
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+
     print(f"Your score: {point}/{multiplicationCount}")
+    print(f"Time : {round(elapsed_time, 3)} seconds")
     print("see you soon!")
 
 user_input = input("Enter your multiplication tables : ")
