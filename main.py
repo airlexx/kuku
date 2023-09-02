@@ -9,7 +9,7 @@ os.system('cls')
 colorama_init()
 
 print(f"{Fore.GREEN}Welcome to kuku{Style.RESET_ALL}")
-print("by Airlex")
+print(f"by {Fore.MAGENTA}Airlex{Style.RESET_ALL}")
 print("")
 
 def SelectTable(string):
@@ -43,13 +43,13 @@ def ReviewTable(tables):
             else:
                 print(f"{Fore.RED}incorrect{Style.RESET_ALL}")
         except:
-            print("invalid input")
+            print(f"{Fore.RED}invalid input{Style.RESET_ALL}")
 
     end_time = time.time()
     elapsed_time = end_time - start_time
 
-    print(f"Your score: {point}/{multiplicationCount}")
-    print(f"Time : {round(elapsed_time, 3)} seconds")
+    print(f"{Fore.CYAN}Your score: {point}/{multiplicationCount}{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}Time : {round(elapsed_time, 3)} seconds{Style.RESET_ALL}")
     print("see you soon!")
 
 user_input = input("Enter your multiplication tables : ")
