@@ -52,6 +52,6 @@ def ReviewTable(tables):
     print(f"{Fore.CYAN}Time : {round(elapsed_time, 3)} seconds{Style.RESET_ALL}")
     print("see you soon!")
 
-user_input = input("Enter your multiplication tables : ")
+user_input = input(f"{Fore.CYAN}Enter your multiplication tables : {Style.RESET_ALL}")
 
 ReviewTable(SelectTable(user_input))
