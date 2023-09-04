@@ -54,4 +54,7 @@ def ReviewTable(tables):
 
 user_input = input(f"{Fore.CYAN}Enter your multiplication tables : {Style.RESET_ALL}")
 
-ReviewTable(SelectTable(user_input))
+try:
+    ReviewTable(SelectTable(user_input))
+except:
+    print("See you soon")
