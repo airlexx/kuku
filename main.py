@@ -50,11 +50,11 @@ def ReviewTable(tables):
 
     print(f"{Fore.CYAN}Your score: {point}/{multiplicationCount}{Style.RESET_ALL}")
     print(f"{Fore.CYAN}Time : {round(elapsed_time, 3)} seconds{Style.RESET_ALL}")
-    print("see you soon!")
+    print("See you soon!")
 
 user_input = input(f"{Fore.CYAN}Enter your multiplication tables : {Style.RESET_ALL}")
 
 try:
     ReviewTable(SelectTable(user_input))
 except:
-    print("See you soon")
+    print("See you soon!")
